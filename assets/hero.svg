@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420">
+<defs>
+<radialGradient id="bg" cx=".72" cy=".55" r=".8"><stop offset="0" stop-color="#1d1036"/><stop offset="1" stop-color="#0d0717"/></radialGradient>
+<filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="spec"><rect x="40" y="200" width="500" height="180"/></clipPath>
+</defs>
+<rect width="1200" height="420" fill="url(#bg)"/>
+<!-- spectrogram of chirps -->
+<g transform="translate(0 0)">
+<rect x="40" y="200" width="500" height="180" rx="8" fill="#160d26" stroke="#33244f"/>
+<g clip-path="url(#spec)" stroke-width="3" stroke-linecap="round" filter="url(#glow)">
+<g><animateTransform attributeName="transform" type="translate" values="0 0;-200 0" dur="4s" repeatCount="indefinite"/>
+<path d="M40 370 L90 210 M90 370 L140 210 M140 290 L165 210 M165 370 L190 290 M190 370 L240 210 M240 330 L252 290 M252 370 L290 250 M290 250 L302 210 M302 370 L340 250 M340 370 L390 210 M390 370 L440 210 M440 290 L465 210 M465 370 L490 290 M490 370 L540 210 M540 330 L552 290 M552 370 L590 250 M590 250 L602 210 M602 370 L640 250 M640 370 L690 210 M690 370 L740 210" stroke="#39ff88"/>
+</g>
+<g opacity=".9"><animateTransform attributeName="transform" type="translate" values="0 0;-400 0" dur="10s" repeatCount="indefinite"/>
+<path d="M40 370 L240 210 M240 300 L328 210 M328 370 L440 280 M440 370 L640 210 M640 300 L728 210 M728 370 L840 280 M840 370 L1040 210" stroke="#c86bff"/>
+</g>
+</g>
+<rect x="46" y="207" width="46" height="42" rx="5" fill="#0d0717" opacity=".85"/><text x="52" y="222" font-family="Consolas, monospace" font-size="13" fill="#39ff88">SF7</text>
+<text x="52" y="242" font-family="Consolas, monospace" font-size="13" fill="#c86bff">SF12</text>
+<text x="290" y="398" font-family="Segoe UI, Helvetica, Arial" font-size="13" fill="#9d8cc0" text-anchor="middle">time →   (frequency ↑, 125 kHz)</text>
+</g>
+<!-- gateway and devices -->
+<g transform="translate(870 245)">
+<circle r="150" fill="none" stroke="#33244f" stroke-dasharray="3 6"/><circle r="100" fill="none" stroke="#33244f" stroke-dasharray="3 6"/><circle r="50" fill="none" stroke="#33244f" stroke-dasharray="3 6"/>
+<g fill="#3a2d57">
+<circle cx="-120" cy="-40" r="3"/><circle cx="-80" cy="60" r="3"/><circle cx="40" cy="-110" r="3"/><circle cx="130" cy="20" r="3"/><circle cx="90" cy="100" r="3"/><circle cx="-30" cy="120" r="3"/><circle cx="-140" cy="30" r="3"/><circle cx="60" cy="-60" r="3"/><circle cx="-60" cy="-90" r="3"/><circle cx="20" cy="70" r="3"/><circle cx="110" cy="-100" r="3"/><circle cx="-100" cy="-110" r="3"/><circle cx="140" cy="80" r="3"/><circle cx="-20" cy="-40" r="3"/>
+</g>
+<g filter="url(#glow)">
+<circle cx="-120" cy="-40" r="5" fill="#ff4f79"><animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/></circle>
+<circle cx="-120" cy="-40" r="5" fill="none" stroke="#ff4f79" stroke-width="1.5"><animate attributeName="r" values="5;60" dur="2.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="2.2s" repeatCount="indefinite"/></circle>
+<circle cx="40" cy="-110" r="5" fill="#ff9f1c"><animate attributeName="opacity" values="0;1;0" dur="1.7s" begin=".5s" repeatCount="indefinite"/></circle>
+<circle cx="40" cy="-110" r="5" fill="none" stroke="#ff9f1c" stroke-width="1.5"><animate attributeName="r" values="5;50" dur="1.7s" begin=".5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="1.7s" begin=".5s" repeatCount="indefinite"/></circle>
+<circle cx="20" cy="70" r="5" fill="#39ff88"><animate attributeName="opacity" values="0;1;0" dur=".9s" begin=".2s" repeatCount="indefinite"/></circle>
+<circle cx="20" cy="70" r="5" fill="none" stroke="#39ff88" stroke-width="1.5"><animate attributeName="r" values="5;30" dur=".9s" begin=".2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur=".9s" begin=".2s" repeatCount="indefinite"/></circle>
+<circle cx="140" cy="80" r="5" fill="#c86bff"><animate attributeName="opacity" values="0;1;0" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
+<circle cx="140" cy="80" r="5" fill="none" stroke="#c86bff" stroke-width="1.5"><animate attributeName="r" values="5;80" dur="3s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
+<circle cx="-140" cy="30" r="5" fill="#c86bff"><animate attributeName="opacity" values="0;1;0" dur="3s" begin="1.4s" repeatCount="indefinite"/></circle>
+<g stroke="#ff3355" stroke-width="3" stroke-linecap="round" opacity="0"><path d="M-147 23 L-133 37 M-133 23 L-147 37"/><animate attributeName="opacity" values="0;0;1;0" keyTimes="0;.6;.7;1" dur="3s" begin="1.4s" repeatCount="indefinite"/></g>
+<circle cx="-60" cy="-90" r="5" fill="#ffe14d"><animate attributeName="opacity" values="0;1;0" dur="1.3s" begin=".8s" repeatCount="indefinite"/></circle>
+</g>
+<path d="M0 -26 L-12 10 L12 10 Z" fill="#22d3ee" stroke="#fff" stroke-width="2" filter="url(#glow)"/>
+<path d="M0 -26 L0 -40" stroke="#22d3ee" stroke-width="3"/>
+</g>
+<text x="40" y="70" font-family="Segoe UI, Helvetica, Arial" font-size="40" font-weight="800" fill="#f1eafe">How many devices can one gateway hear?</text>
+<text x="42" y="106" font-family="Segoe UI, Helvetica, Arial" font-size="18" fill="#39ff88">LoRa chirps, built from scratch · discrete-event LoRaWAN · capture · inter-SF interference · ADR · energy</text>
+<text x="42" y="140" font-family="Consolas, monospace" font-size="14" fill="#9d8cc0">EU868 · 3 channels · 1 % duty cycle · 100 to 10 000 devices · 1 to 8 gateways</text>
+</svg>
